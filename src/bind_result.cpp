@@ -89,6 +89,11 @@ namespace sqlpp
       return true;
     }
 
+    uint32_t bind_result_t::size() const
+    {
+        return _handle->totalCount;
+    }
+
     void bind_result_t::_bind_boolean_result(size_t _index, signed char* value, bool* is_null)
     {
       auto index = static_cast<int>(_index);

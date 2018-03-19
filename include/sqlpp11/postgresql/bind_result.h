@@ -62,6 +62,8 @@ namespace sqlpp
         return (this->_handle == rhs._handle);
       }
 
+      uint32_t size() const;
+
       template <typename ResultRow>
       void next(ResultRow& result_row)
       {
